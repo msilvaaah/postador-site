@@ -1,0 +1,10 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Conectando…</title>
+<style>body{font:16px system-ui,sans-serif;max-width:560px;margin:60px auto;padding:0 16px}</style></head><body>
+<p>Voltando para o Postador no seu computador…</p>
+<p id="m"></p>
+<script>
+// Repassa o código de autorização para o servidor local do Postador. Nada é guardado aqui.
+var destino = 'http://localhost:4747/callback/tiktok' + location.search;
+document.getElementById('m').innerHTML = 'Se não abrir sozinho, <a href="' + destino.replace(/"/g, '') + '">clique aqui</a> (o Postador precisa estar rodando).';
+location.replace(destino);
+</script></body></html>
